@@ -8,6 +8,9 @@ spring:
     url: jdbc:mysql://127.0.0.1:3305/stock_example
     username: root
     password: 1234
+    hikari:
+      maximum-pool-size: 40
+#      NamedLock 같은 데이터소스 사용함으로 인해 풀 사이즈좀 늘림
 
 logging:
   level:
