@@ -15,3 +15,21 @@ docker exec -it mysql /bin/bash
 mysql -u root -p
 create database stock_example;
 use stock_example;
+
+docker pull redis
+
+docker run --name myredis -d -p 6379:6379 redis
+
+
+docker exec -it 2daac8089ba2 redis-cli
+
+setnx 1 lock
+setnx 1 lock
+del 1
+
+
+redissen
+
+docker exec -it 2daac8089ba2 redis-cli
+subscribe ch1
+publish ch1 hello
